@@ -370,7 +370,7 @@ class AssetFormBody extends StatelessWidget {
             label: 'Nomor Aset',
             key: 'assetNumber',
             value: asset?.assetNumber,
-            isReadOnlyOverride: true,
+            isReadOnlyOverride: asset != null ? true : isReadOnly,
           ),
 
           _buildField(

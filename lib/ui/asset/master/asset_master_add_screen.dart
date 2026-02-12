@@ -353,7 +353,6 @@ class _AssetMasterAddScreenState extends State<AssetMasterAddScreen> {
       label: "Hasil Inventaris",
       hint: "Pilih Hasil",
       controller: vm.controllers['inventoryResult']!,
-
       futureRequest: (query) async {
         const List<String> options = [
           "Match",
@@ -476,6 +475,7 @@ class _AssetMasterAddScreenState extends State<AssetMasterAddScreen> {
       ),
       body: AssetFormBody(
         isReadOnly: false,
+        canEditMasterInfo: true, 
         controllers: vm.controllers,
         customFields: customFields,
         photoCodeFile: vm.photoCodeFile,
